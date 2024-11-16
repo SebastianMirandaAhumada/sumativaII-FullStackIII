@@ -1,0 +1,15 @@
+com\nuevo\proyecto\controller\LibroController.class
+com\nuevo\proyecto\controller\UserController.class
+com\nuevo\proyecto\model\Usuarios.class
+com\nuevo\proyecto\repository\CartaRepository.class
+com\nuevo\proyecto\service\UserService.class
+com\nuevo\proyecto\exception\GlobalExceptionHandler.class
+com\nuevo\proyecto\model\Carta.class
+com\nuevo\proyecto\model\Libro.class
+com\nuevo\proyecto\controller\CartaController.class
+com\nuevo\proyecto\service\LibroService.class
+com\nuevo\proyecto\service\CartaService.class
+com\nuevo\proyecto\repository\LibroRepository.class
+com\nuevo\proyecto\exception\ResourceNotFoundException.class
+com\nuevo\proyecto\App.class
+com\nuevo\proyecto\repository\UserRepository.class
