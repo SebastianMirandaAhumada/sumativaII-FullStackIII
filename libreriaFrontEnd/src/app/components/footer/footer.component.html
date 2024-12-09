@@ -1,0 +1,53 @@
+<footer class="mt-5">
+    <article class="container">
+        <section class="row">
+
+        <div class="col-md-4">
+            <h4>Contacto</h4>
+            <p>Email: contactogmail.com</p>
+            <p>Teléfono: +34 123 456 789</p>
+        </div>
+        <div class="col-md-4 d-flex flex-column">
+            <h4>Enlaces Rápidos</h4>
+            <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/registro']">Registro</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/login']">Inicio Sesion</a>
+              </li>
+              <li class="nav-item" id="adminLink" *ngIf="flag">
+                <a class="nav-link" href="./login.html">Admin</a>
+              </li>
+              <li class="nav-item" id="profileLink" *ngIf="flag">
+                <a class="nav-link" href="./user.html">Mi Perfil</a>
+              </li>
+              <li class="nav-item" id="profileLink">
+                <a class="nav-link"[routerLink]="['/user']"  *ngIf="isAuthenticated">Mi Cuenta</a>
+              </li>
+              <li class="nav-item" id="profileLink">
+                <a class="nav-link"[routerLink]="['/admin']"  *ngIf="isAuthenticated">Administrador</a>
+              </li>
+        </div>
+        <div class="col-md-4">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+
+    </article>
+    <p>&copy; 2024 Mi Tienda Juegos. Todos los derechos reservados.</p>
+</footer>

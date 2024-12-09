@@ -1,0 +1,69 @@
+<main class="container-fluid mt-5">
+  <h1>Mi Tienda!</h1>
+  <section class="col-6">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar el libro"
+        aria-label="Buscar el libro"
+        aria-describedby="basic-addon1"
+        (input)="onFilter($event)"
+      />
+    </div>
+  </section>
+  <article class="row my-5 justify-content-center">
+    <h2>Libros!</h2>
+    <section
+      *ngFor="let item of data"
+      class="card col-md-3 me-4 mt-4"
+      style="width: 18rem"
+    >
+      <div class="card-body">
+        <h4 class="card-title" id="mario">{{ item.titulo }}</h4>
+        <h6 class="card-subtitle" id="mario">Autor:{{ item.autor }}</h6>
+        <p class="card-text">
+          {{ item.genero }}
+        </p>
+        <button (click)="addToCart(item)" class="btn btn-outline-primary">
+          Comprar
+        </button>
+      </div>
+    </section>
+  </article>
+  <section class="col-6">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Busca la carta"
+        aria-label="Busca la carta"
+        aria-describedby="basic-addon1"
+        (input)="onFilterCarts($event)"
+      />
+    </div>
+  </section>
+  <article class="row my-5 justify-content-center">
+    <h2>Cartas!</h2>
+    <section
+      *ngFor="let item of dataCartas"
+      class="card col-md-3 me-4 mt-4"
+      style="width: 18rem"
+    >
+      <div class="card-body">
+        <h4 class="card-title" id="mario">Nombre: {{ item.nombre }}</h4>
+        <h5 class="card-subtitle">tipo: {{ item.tipo }}</h5>
+        <h6 class="card-subtitle" id="mario">{{ item.descripcion }}</h6>
+        <p class="card-text">
+          {{ item.precio }}
+        </p>
+        <button (click)="addToCartCart(item)" class="btn btn-outline-primary">
+          Comprar
+        </button>
+      </div>
+    </section>
+  </article>
+  <h1 class="text-danger">
+    {{ error }}
+  </h1>
+</main>

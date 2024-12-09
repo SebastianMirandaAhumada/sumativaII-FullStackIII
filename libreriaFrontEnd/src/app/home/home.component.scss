@@ -1,0 +1,23 @@
+main{
+  text-align: center;
+}
+
+.card-body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 821px){
+    .button_section{
+      flex-direction: column;
+      gap: 1rem;
+      width: 50%;
+    }
+    .col-md-3 {
+      align-content: center;
+      justify-content: center;
+      display: flex;
+      margin-bottom: 1rem;
+    }
+  }

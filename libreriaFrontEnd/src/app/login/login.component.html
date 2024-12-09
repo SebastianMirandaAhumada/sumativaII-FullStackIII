@@ -1,0 +1,33 @@
+<main class="container mt-5">
+    <h1>Inicio de Sesion</h1>
+    <form class="my-4" id="loginForm" [formGroup]="form" (ngSubmit)="submit()">
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="email"
+         
+          aria-describedby="emailHelp"
+        />
+        <div *ngIf="f['email'].touched && f['email'].invalid"  class="form-text text-danger">Email Invalido</div>
+     
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Contraseña</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          formControlName="pass"
+          id="exampleInputPassword1"
+        />
+        <div *ngIf="f['pass'].touched && f['pass'].invalid"  class="form-text text-danger">Contraseña requerida</div>
+      </div>
+      <button 
+      [disabled]="!form.valid"
+      type="submit" class="btn btn-primary">Ingresar</button>
+    </form>
+  </main>

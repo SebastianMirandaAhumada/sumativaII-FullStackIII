@@ -1,0 +1,88 @@
+{
+  "juegos": [
+    {
+      "id": "1",
+      "quantity": 1,
+      "img": "./assets/img/lordoftherings.jpg",
+      "title": "El Señor de los Anillos nº 01/03 la Comunidad del Anillo",
+      "precio": 50000,
+      "description": "Este libro es como un relámpago en un cielo claro. Decir que la novela heroica, espléndida, elocuente y desinhibida, ha retornado de pronto en una época de un antirromanticismo casi patológico, sería inadecuado. Para quienes vivimos en esa extraña época, el retorno —y el alivio que nos trae— es sin duda lo más importante. Pero para la historia misma de la novela —una historia que se remonta a la Odisea y a antes de la Odisea— no es un retorno, sino un paso adelante o una revolución: la conquista de un territorio nuevo.» —C.S. Lewis, Time & Tide, 1954"
+    },
+    {
+      "id": "2",
+      "quantity": 1,
+      "img": "assets/img/ecodeunpueblo.jpg",
+      "title": "Ecos en un Pueblo Fantasma ",
+      "precio": 70000,
+      "description": "Durante la pandemia del Covid-19, el humorista Edo Caroe y el psicoanalista Manuel Ugalde comenzaron un trabajo de divulgación de algunos tópicos de la filosofía y la psicología, como el malestar social, la angustia y la depresión."
+    },
+    {
+      "id": "3",
+      "quantity": 1,
+      "img": "assets/img/alas.png",
+      "title": "Alas de Onix",
+      "precio": 30000,
+      "description": "Después de casi dieciocho meses en la escuela de guerra de Basgiath, Violet Sorrengail sabe que no hay más tiempo para lecciones. No más tiempo para la incertidumbre. Debido a que la batalla realmente ha comenzado, y con los enemigos acercándose desde fuera de sus muros y dentro de sus filas, es imposible saber en quién confiar."
+    },
+    {
+      "id": "4",
+      "quantity": 1,
+      "img": "assets/img/esclava.jpg",
+      "title": "Esclava De La Libertad ",
+      "precio": 70000,
+      "description": "A la isla caribeña arriba un barco portador de una siniestra carga. Más de setecientas mujeres y niñas secuestradas de su África natal llegan para trabajar, hasta la extenuación, en los campos de caña de azúcar y parir hijos que serán también esclavos. Kaweka es una de ellas, una muchacha que vivirá en primera persona el horror de la esclavitud en la hacienda del cruel marqués de Santadoma"
+    },
+    {
+      "id": "5",
+      "quantity": 1,
+      "img": "assets/img/asistente.jpg",
+      "title": "a asistenta",
+      "precio": 40000,
+      "description": "Todos los días friego la preciosa casa de los Winchester de arriba abajo. Recojo a su hija del colegio y preparo deliciosas comidas para toda la familia antes de subir a cenar sola en mi minúscula habitación del piso superior."
+    },
+    {
+      "id": "2",
+      "quantity": 1,
+      "img": "assets/img/logia.jpg",
+      "title": "La logia",
+      "precio": 70000,
+      "description": "Sumérgete en el universo de Cyberpunk: desde la historia original de Cyberpunk 2077 y su fascinante expansión de suspense y espionaje, Phantom Liberty, al premiado anime Cyberpunk: Edgerunners. Hay infinidad de historias por descubrir en la letal megalópolis de Night City."
+    },
+    {
+      "id": "3",
+      "quantity": 1,
+      "img": "./assets/img/hermanos.jpg",
+      "title": "Los Hermanos Karamazov ",
+      "precio": 30000,
+      "description": "Los hermanos Karamázov fue publicada por primera vez, como una serie, entre 1879 y 1880. Fue la última obra del escritor ruso Fiódor Dostoyevski (1821-1881), y es considerada como su mejor novela y, también, la más importante. Se desarrolla en torno al parricidio de Fiódor Pávlovich Karamázov y los cuestionamientos íntimos"
+    }
+  ],
+  "carrito": [
+    {
+      "id": "2",
+      "quantity": 1,
+      "img": "assets/img/logia.jpg",
+      "title": "La logia",
+      "precio": 70000,
+      "description": "Sumérgete en el universo de Cyberpunk: desde la historia original de Cyberpunk 2077 y su fascinante expansión de suspense y espionaje, Phantom Liberty, al premiado anime Cyberpunk: Edgerunners. Hay infinidad de historias por descubrir en la letal megalópolis de Night City."
+    }
+  ],
+  "users": [
+    {
+      "id": "c936",
+      "name": "sebastian",
+      "phone": "555555",
+      "email": "seba@gmail.com",
+      "pass": "1234",
+      "passconfirm": "1234"
+    },
+    {
+      "name": "antonio",
+      "phone": "555555",
+      "email": "antonio@gmail.com",
+      "pass": "123456",
+      "passconfirm": "123456",
+      "id": "_HAgDfP"
+    }
+  ]
+}

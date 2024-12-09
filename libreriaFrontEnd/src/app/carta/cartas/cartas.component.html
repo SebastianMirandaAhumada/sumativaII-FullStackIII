@@ -1,0 +1,43 @@
+<main class="container mt-5 ">
+    <h1 class=" mb-5 text-center">Registrate una Nueva Carta!</h1>
+    <form id="registerForm"  (ngSubmit)="submit()"  [formGroup]="form"> 
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label"> nombre</label>
+        <input type="text" class="form-control" formControlName="nombre" />
+        <div id="nombreCompletoHelp" class="form-text text-danger"></div>
+        <div *ngIf="f.nombre.errors?.['minlength']" class="form-text text-danger">
+         Debe tener mas de de 2 letras
+        </div>
+    
+      </div>
+  
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Precio</label>
+        <input type="text" class="form-control" formControlName="precio" />
+        <div *ngIf="f.precio.errors?.['minlength']" class="form-text text-danger">
+          El año de publicacion debe tener mas de 5 digitos
+         </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" formControlName="descripcion" />
+        <div *ngIf="f['descripcion'].touched && f['descripcion'].invalid"  class="form-text text-danger">descripcion Invalido</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Tipo</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="tipo"
+  
+        />
+        <div id="passwordHelp" class="form-text text-danger"></div>
+      </div>
+      <button type="submit"  class="btn btn-primary">
+        Ingresar
+      </button>
+    </form>
+  </main>
+  
+  

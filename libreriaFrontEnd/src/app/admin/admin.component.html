@@ -1,0 +1,125 @@
+<div class="w-100 text-center my-5">
+  <h1>Perfil Administrador</h1>
+
+</div>
+<h2>Libros</h2>
+<ul class="list-group" *ngFor="let item of data">
+  <li class="list-group-item">
+    {{ item.titulo }}
+    <div class="d-flex justify-content-end w-100">
+      <button type="button" class="btn btn-success me-3" (click)="getform(item.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Editar
+      </button>
+      <button type="button" class="btn btn-danger" (click)="borrar(item.id)">Eliminar</button>
+    </div>
+  </li>
+</ul>
+<h2>Cartas</h2>
+<ul class="list-group" *ngFor="let item of dataCartas">
+  <li class="list-group-item">
+    {{ item.nombre }}
+    <div class="d-flex justify-content-end w-100">
+      <button type="button" class="btn btn-success me-3" (click)="getformCarta(item.id)" data-bs-toggle="modal" data-bs-target="#Carta">
+        Editar
+      </button>
+      <button type="button" class="btn btn-danger" (click)="borrarCarta(item.id)">Eliminar</button>
+    </div>
+  </li>
+</ul>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 font-bold" id="staticBackdropLabel">Editar Libro</h1>
+        <hr>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="registerForm"  (ngSubmit)="submit()"  [formGroup]="form"> 
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Titulo</label>
+            <input type="text" class="form-control" formControlName="titulo" />
+            <div id="nombreCompletoHelp" class="form-text text-danger"></div>
+            <div *ngIf="f.titulo.errors?.['minlength']" class="form-text text-danger">
+             Debe tener mas de de 2 letras
+            </div>
+        
+          </div>
+      
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Autor</label>
+            <input type="text" class="form-control" formControlName="autor" />
+            <div *ngIf="f.autor.errors?.['minlength']" class="form-text text-danger">
+              El numero debe tener mas de 5 digitos
+             </div>
+          </div>
+      
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Año de Publicacion</label>
+            <input type="text" class="form-control" formControlName="anioPublicacion" />
+            <div *ngIf="f['anioPublicacion'].touched && f['anioPublicacion'].invalid"  class="form-text text-danger">Email Invalido</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Genero</label>
+            <input type="text" class="form-control" formControlName="genero" />
+           
+          </div>
+        
+          <button type="submit"  data-bs-dismiss="modal" class="btn btn-primary">
+            Editar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <h1 class="text-danger">
+    {{ error }}
+  </h1>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="Carta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="CartaLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 font-bold" id="CartaLabel">Editar Carta</h1>
+        <hr>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="registerForm"  (ngSubmit)="submitCartas()"  [formGroup]="formCartas"> 
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">nombre</label>
+            <input type="text" class="form-control" formControlName="nombre" />
+            <div id="nombreCompletoHelp" class="form-text text-danger"></div>
+        
+          </div>
+      
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Precio</label>
+            <input type="text" class="form-control" formControlName="precio" />       
+          </div>
+      
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Descripcion</label>
+            <input type="text" class="form-control" formControlName="descripcion" />            
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Tipo</label>
+            <input type="text" class="form-control" formControlName="tipo" />
+           
+          </div>
+        
+          <button type="submit"  data-bs-dismiss="modal" class="btn btn-primary">
+            Editar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <h1 class="text-danger">
+    {{ error }}
+  </h1>
+</div>

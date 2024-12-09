@@ -1,0 +1,66 @@
+<main class="container mt-5">
+    <h1>Mi Cuenta</h1>
+    <form id="registerForm"  (ngSubmit)="submit()"  [formGroup]="form"> 
+      <!-- <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
+        <input type="text" class="form-control" formControlName="name" />
+        <div id="nombreCompletoHelp" class="form-text text-danger"></div>
+        <div *ngIf="f.name.errors?.['minlength']" class="form-text text-danger">
+         Debe tener mas de de 2 letras
+        </div>
+    
+      </div>
+  
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Telefono</label>
+        <input type="text" class="form-control" formControlName="phone" />
+        <div *ngIf="f.phone.errors?.['minlength']" class="form-text text-danger">
+          El numero debe tener mas de 5 digitos
+         </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" formControlName="email" />
+        <div *ngIf="f['email'].touched && f['email'].invalid"  class="form-text text-danger">Email Invalido</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="pass"
+          id="contraseña"
+        />
+        <div id="passwordHelp" class="form-text text-danger"></div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Confirmar Contraseña</label
+        >
+        <input
+          type="password"
+          formControlName="passconfirm"
+          class="form-control"
+          id="confirmarContraseña"
+        />
+        <div
+          class="error-message"
+          *ngIf="form?.errors?.['mismatch'] && form?.touched"
+          class="form-text text-danger"
+        >
+          Las contraseñas no coinciden
+        </div>
+      </div> -->
+      <div class="d-flex justify-content-between">
+        <!-- <button type="submit" [disabled]="form.invalid" class="btn btn-primary">
+          Editar
+        </button> -->
+        <button type="submit" (click)="cerrarSesion()" class="btn btn-danger">
+          Cerrar Sesion
+        </button>
+
+      </div>
+    </form>
+  </main>
+  
